@@ -7,8 +7,8 @@ import CloseIcon from "@mui/icons-material/Close"
 import WbSunnyIcon from "@mui/icons-material/WbSunny"
 import DarkModeIcon from "@mui/icons-material/DarkMode"
 
-import PageLogo from "../components/PageLogo"
-import CButton from "../components/CButton"
+import PageLogo from "../components/shared/PageLogo"
+import CButton from "../components/shared/CButton"
 
 import { Link } from "react-scroll"
 import {
