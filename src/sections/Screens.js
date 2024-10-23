@@ -7,9 +7,9 @@ import "animate.css"
 import { StyledGenericRoot, StyledGenericContainer } from '../components/Generic'
 import PageHeader from '../components/PageHeader'
 
-const Features = () => {
+const Screens = () => {
 
-    const [featuresContainer, featuresContainerInView] = useInView({
+    const [screensContainer, screensContainerInView] = useInView({
         threshold: 0.2,
         triggerOnce: true,
     });
@@ -24,23 +24,23 @@ const Features = () => {
     }, []);
 
     return (
-        <Scroll.Element name="Features">
-            <StyledGenericRoot ref={featuresContainer} isMobile={isMobile}>
+        <Scroll.Element name="Screens">
+            <StyledGenericRoot ref={screensContainer} isMobile={isMobile}>
                 <StyledGenericContainer
                     sx={
-                        featuresContainerInView
+                        screensContainerInView
                             ? { visibility: "visible" }
                             : { visibility: "hidden" }
                     }
                     className={
-                        featuresContainerInView ? "animate__animated animate__fadeInUp" : ""
+                        screensContainerInView ? "animate__animated animate__fadeInUp" : ""
                     }
                 >
-                    <PageHeader title="Features" subText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " />
+                    <PageHeader title="Screens" subText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " />
                 </StyledGenericContainer>
             </StyledGenericRoot>
         </Scroll.Element>
     )
 }
 
-export default Features
+export default Screens

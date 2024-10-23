@@ -1,13 +1,14 @@
 import { React, useState, useEffect, useContext } from "react"
 import { ThemeContext } from "../utils/ThemeContext"
 import navbarData from "../content/navbar.json"
-import contentData from "../content/main.json";
+import contentData from "../content/main.json"
 import MenuIcon from "@mui/icons-material/Menu"
 import CloseIcon from "@mui/icons-material/Close"
-import WbSunnyIcon from "@mui/icons-material/WbSunny";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
+import WbSunnyIcon from "@mui/icons-material/WbSunny"
+import DarkModeIcon from "@mui/icons-material/DarkMode"
 
-import PageLogoSVG from "../components/PageLogoSVG"
+import PageLogo from "../components/PageLogo"
+import CButton from "../components/CButton"
 
 import { Link } from "react-scroll"
 import {
@@ -25,7 +26,6 @@ import {
     Box,
     Switch
 } from '@mui/material';
-import PageLogo from "./PageLogo";
 
 
 const StyledAppBar = styled(AppBar)(({ theme, isScrolled }) => ({
@@ -75,29 +75,13 @@ const StyledAppBarLink = styled(Link)(({ theme }) => ({
         transition: "transform 150ms ease-in-out 0s !important",
         cursor: "pointer",
         fontSize: "1.2rem",
-        padding: "0.75rem",
+        padding: "0.5rem",
         "&:hover": {
             color: theme.palette.text.secondary + " !important",
             transform: "translateY(-2px)",
         },
     }
 
-}));
-
-const StyledDownloadLink = styled("a")(({ theme }) => ({
-    cursor: "pointer",
-    textDecoration: "none",
-    "& p": {
-        borderRadius: "8px !important",
-        padding: "0.25rem 0.5rem",
-        fontSize: "1.2rem",
-        backgroundColor: theme.palette.button.backgroundPrimary + " !important",
-        color: theme.palette.button.foregroundPrimary,
-        transition: "transform 150ms ease-in-out 0s !important",
-        "&:hover": {
-            transform: "scale(1.08)",
-        },
-    },
 }));
 
 const StyledDrawerIcon = styled(MenuIcon)(({ theme }) => ({
@@ -164,9 +148,10 @@ const StyledLogo = styled(Link)(({ theme }) => ({
         animation: "fadeIn",
         animationDuration: "2s",
         color: theme.palette.text.primary + " !important",
+        fontFamily: "'Playwrite GB S', cursive",
         fontSize: "1.2rem",
         padding: "0",
-        
+
     },
 }));
 
@@ -244,19 +229,18 @@ const Navbar = () => {
                     </StyledAppBarLink>
                 </div>
             ))}
+
             <div
                 style={{ paddingLeft: "4px" }}
                 className={!hasAnimated ? "animate__animated animate__fadeInDown" : ""}
             >
-                <StyledDownloadLink
+                <CButton
+                    title="Download"
                     href={contentData.downloadLink}
-                    target="_blank"
-                >
-                    <Typography>
-                        Download
-                    </Typography>
-                </StyledDownloadLink>
+                />
+
             </div>
+
             <div
                 className={!hasAnimated ? "animate__animated animate__fadeInDown" : ""}
             >
@@ -304,23 +288,12 @@ const Navbar = () => {
                     onKeyDown={toggleDrawer(false)}
                 >
                     <StyledDrawerList>
-                        <StyledDownloadLink
+                        <CButton
+                            title="Download"
                             href={contentData.downloadLink}
-                            target="_blank"
-                        >
-                            <Typography
-                                sx={{
-                                    padding: "0.5rem 1rem !important",
-                                    fontSize: "1.75rem !important",
-                                    transition:
-                                        "opacity 600ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, background-color 200ms ease-in-out 0s !important",
-                                    animation: "fadeIn",
-                                    animationDuration: "2s",
-                                }}
-                            >
-                                Download
-                            </Typography>
-                        </StyledDownloadLink>
+                            fontSize={1.75}
+                            isDrawer={true}
+                        />
                     </StyledDrawerList>
                     {navbarData.map((data) => (
                         <StyledDrawerList key={data.id}>
@@ -363,9 +336,8 @@ const Navbar = () => {
                                 smooth={true}
                                 duration={1000}
                             >
-                                {/* <PageLogo width={56} height={56} /> */}
-                                <PageLogoSVG width={56} height={56} />
-                                <Typography>App Name</Typography>
+                                <PageLogo width={56} height={56} isSVG={true} />
+                                <Typography>Appname</Typography>
                             </StyledLogo>
                         </StyledLogoContainer>
                         {collapse ? drawer : navbar}

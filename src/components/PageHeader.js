@@ -1,6 +1,5 @@
 import { styled, Typography, Box, Link } from "@mui/material"
-import PageLogoSVG from "./PageLogoSVG"
-// import PageLogo from "./PageLogo"
+import PageLogo from "./PageLogo"
 
 const isFirefox = /Firefox/i.test(navigator.userAgent);
 
@@ -17,6 +16,7 @@ export const StyledPageTitle = styled(Typography)(({ theme }) => ({
     color: theme.palette.text.primary,
     fontSize: "clamp(32px, 4vw, 56px) !important",
     fontWeight: "bold !important",
+    marginBottom: "1rem",
     position: "relative",
     textAlign: isFirefox ? "-moz-center" : "-webkit-center",
     "&:before, &:after": {
@@ -43,8 +43,13 @@ export const StyledPageTitle = styled(Typography)(({ theme }) => ({
 
 export const StyledPageSubText = styled(Typography)(({ theme }) => ({
     color: theme.palette.text.primary,
-    fontSize: "clamp(20px, 2vw, 26px) !important",
-    marginBottom: "0.5rem"
+    textAlign: "center",
+    fontSize: "clamp(18px, 1.75vw, 24px) !important",
+    marginBottom: "0.5rem",
+    width: "50vw !important",
+    [theme.breakpoints.down("md")]: {
+        width: "70vw !important",
+    }
 }));
 
 export const StyledPageLogo = styled(Link)(({ theme }) => ({
@@ -60,8 +65,7 @@ export const StyledPageLogo = styled(Link)(({ theme }) => ({
 const PageHeader = ({ title, subText }) => {
     return (
         <StyledPageHeaderContainer>
-            <PageLogoSVG />
-            {/* <PageLogo /> */}
+            <PageLogo isSVG={true} />
             <StyledPageTitle component="h1">
                 {title}
             </StyledPageTitle>
