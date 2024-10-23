@@ -1,7 +1,6 @@
 import React from "react"
 import { Button, Typography, styled } from "@mui/material"
 
-
 export const StyledGenericButton = styled(Button)(({ theme, isDrawer, fontSize }) => ({
     textTransform: "none",
     backgroundColor: theme.palette.button.backgroundPrimary + " !important",
@@ -15,7 +14,6 @@ export const StyledGenericButton = styled(Button)(({ theme, isDrawer, fontSize }
         animation: "fadeIn",
         animationDuration: "2s",
     },
-
     '&:hover': {
         backgroundColor: theme.palette.button.backgroundPrimary + " !important",
         transform: "scale(1.05)",

@@ -1,5 +1,5 @@
 import { SvgIcon, useTheme, styled } from "@mui/material";
-import logoImg from "../../assets/shared/logo.png"
+import logoImg from "../../assets/logo.png"
 
 export const StyledPageLogoImage = styled("img")(({ theme, width, height }) => ({
     animation: "fadeIn",

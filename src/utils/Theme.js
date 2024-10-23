@@ -6,12 +6,13 @@ export const lightTheme = createTheme({
       styleOverrides: {
         // Style for the scrollbar
         "*::-webkit-scrollbar": {
-          width: "0.4em",
-          height: "0.4em",
-          backgroundColor: "#FFFFFF",
+          width: "0.5em",
+          height: "0.5em",
+          backgroundColor: "#ecf0f1",
         },
         "*::-webkit-scrollbar-thumb": {
-          backgroundColor: "#3A506B", //#5BC0BE
+          backgroundColor: "#3A506B",
+          borderRadius: "0.2em",
         },
         "*": {
           boxSizing: "unset",
@@ -104,6 +105,7 @@ export const darkTheme = createTheme({
         },
         "*::-webkit-scrollbar-thumb": {
           backgroundColor: "#5BC0BE",
+          borderRadius: "0.2em",
         },
         "*": {
           boxSizing: "unset",

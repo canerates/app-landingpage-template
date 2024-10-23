@@ -1,0 +1,44 @@
+[
+    {
+        "id": "0",
+        "title": "Technology 1",
+        "image": "../images/technology/technology1.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "link": "https://www.canerates.com"
+    },
+    {
+        "id": "1",
+        "title": "Technology 2",
+        "image": "../images/technology/technology2.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "link": "https://www.canerates.com"
+    },
+    {
+        "id": "2",
+        "title": "Technology 3",
+        "image": "../images/technology/technology3.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "link": "https://www.canerates.com"
+    },
+    {
+        "id": "3",
+        "title": "Technology 4",
+        "image": "../images/technology/technology4.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "link": "https://www.canerates.com"
+    },
+    {
+        "id": "4",
+        "title": "Technology 5",
+        "image": "../images/technology/technology5.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "link": "https://www.canerates.com"
+    },
+    {
+        "id": "5",
+        "title": "Technology 6",
+        "image": "../images/technology/technology6.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "link": "https://www.canerates.com"
+    }
+]
