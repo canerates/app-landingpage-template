@@ -73,7 +73,7 @@ export const lightTheme = createTheme({
       backgroundPrimary: `linear-gradient(to bottom, #53739A, #ecf0f1)`,
       backgroundSecondary: `linear-gradient(to bottom, #018786, #ecf0f1)`,
     },
-    project: {
+    feature: {
       backgroundPrimary: "#bdc3c7",
       backgroundSecondary: "#bdc3c7",
       shadowPrimary: "#2c3e50",
@@ -166,7 +166,7 @@ export const darkTheme = createTheme({
       backgroundPrimary: `linear-gradient(to bottom, slategray, #3700B3)`,
       backgroundSecondary: `linear-gradient(to bottom, #212121, #03DAC6)`,
     },
-    project: {
+    feature: {
       backgroundPrimary: "#505050",
       backgroundSecondary: "",
       shadowPrimary: "#3A506B",

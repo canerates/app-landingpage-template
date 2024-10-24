@@ -4,8 +4,8 @@ import * as Scroll from "react-scroll"
 import { useInView, InView } from "react-intersection-observer"
 import "animate.css"
 
-import { StyledGenericRoot, StyledGenericContainer } from '../components/shared/Generic'
-import PageHeader from '../components/shared/PageHeader'
+import { StyledGenericRoot, StyledGenericContainer } from "../components/shared/Generic"
+import PageHeader from "../components/shared/PageHeader"
 
 const Screens = () => {
 
