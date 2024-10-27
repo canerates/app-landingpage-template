@@ -2,37 +2,37 @@
     {
         "id": "0",
         "title": "Feature 1",
-        "image": "../images/features/feature1.png",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        "image": "../images/features/100.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  "
     },
     {
         "id": "1",
         "title": "Feature 2",
-        "image": "../images/features/feature2.png",
+        "image": "../images/features/100.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     },
     {
         "id": "2",
         "title": "Feature 3",
-        "image": "../images/features/feature3.png",
+        "image": "../images/features/100.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     },
     {
         "id": "3",
         "title": "Feature 4",
-        "image": "../images/features/feature4.png",
+        "image": "../images/features/100.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     },
     {
         "id": "4",
         "title": "Feature 5",
-        "image": "../images/features/feature5.png",
+        "image": "../images/features/100.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     },
     {
         "id": "5",
         "title": "Feature 6",
-        "image": "../images/features/feature6.png",
+        "image": "../images/features/100.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     }
 ]

@@ -31,9 +31,13 @@ const StyledFeaturesContainer = styled(Container)(({ theme }) => ({
   }));
 
   const StyledFeaturessGridItem = styled(Grid)(({ theme }) => ({
+    position: "relative",
+    minHeight: "15rem",
     paddingTop: "0 !important",
     paddingLeft: "0 !important",
-    
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   }));
 
 const Features = () => {
@@ -76,6 +80,7 @@ const Features = () => {
                                     <StyledFeaturessGridItem
                                         item
                                         xs={12}
+                                        sm={6}
                                         md={4}
                                         ref={ref}
                                         inView={inView}
