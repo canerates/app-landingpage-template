@@ -4,10 +4,17 @@ const StyledFeatureBox = styled(Box)(({ theme }) => ({
   height: "90%",
   width: "90%",
   boxSizing: "border-box",
-  padding: "1.5rem !important",
+  padding: "2rem !important",
   borderRadius: "1rem",
   boxShadow: `0px 0px 10px ${theme.palette.feature.shadowPrimary}70`,
   backgroundColor: `${theme.palette.feature.backgroundPrimary}70`,
+  cursor: "pointer",
+  transform: "none",
+  transition: "transform 150ms linear, box-shadow 200ms ease-in-out",
+  "&:hover": {
+    transform: "scale(1.02)",
+    boxShadow: `0px 0px 15px ${theme.palette.feature.shadowPrimary}90`,
+  }
 }));
 
 const StyledFeatureContent = styled("div")(({ theme }) => ({
