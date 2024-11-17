@@ -3,7 +3,7 @@ import CButton from "../shared/CButton"
 
 const StyledTechnologyBox = styled(Box)(({ theme }) => ({
     height: "90%",
-    width: "90%",
+    width: "95%",
     boxSizing: "border-box",
     padding: "2rem !important",
     borderRadius: "1rem",

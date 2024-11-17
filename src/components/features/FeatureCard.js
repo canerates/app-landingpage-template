@@ -33,8 +33,8 @@ const StyledFeatureContent = styled("div")(({ theme }) => ({
 }));
 
 const StyledFeatureImage = styled("img")(({ theme }) => ({
-  height: "100px",
-  width: "100px",
+  height: "75px",
+  width: "75px",
   border: "2px solid #fff",
 }));
 
