@@ -7,7 +7,6 @@ import "animate.css"
 import { StyledGenericRoot, StyledGenericContainer } from "../components/shared/Generic"
 import PageHeader from "../components/shared/PageHeader"
 import features from "../content/features.json"
-import { inView } from "framer-motion"
 import FeatureCard from "../components/features/FeatureCard"
 
 const StyledFeaturesContainer = styled(Container)(({ theme }) => ({
@@ -19,18 +18,18 @@ const StyledFeaturesContainer = styled(Container)(({ theme }) => ({
     justifyContent: "center",
     marginTop: "1rem",
     marginBottom: "1rem",
-  }));
+}));
 
-  const StyledFeaturesGrid = styled(Grid)(({ theme }) => ({
+const StyledFeaturesGrid = styled(Grid)(({ theme }) => ({
     justifyContent: "space-around",
     width: "100%",
     marginLeft: "0 !important",
     marginTop: "0 !important",
     paddingBottom: "1rem",
     paddingTop: "1rem",
-  }));
+}));
 
-  const StyledFeaturessGridItem = styled(Grid)(({ theme }) => ({
+const StyledFeaturesGridItem = styled(Grid)(({ theme }) => ({
     position: "relative",
     minHeight: "15rem",
     paddingTop: "0 !important",
@@ -38,7 +37,7 @@ const StyledFeaturesContainer = styled(Container)(({ theme }) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-  }));
+}));
 
 const Features = () => {
 
@@ -76,8 +75,8 @@ const Features = () => {
                     <StyledFeaturesGrid container rowSpacing={6} columnSpacing={12}>
                         {features.map((feature) => (
                             <InView key={feature.id} threshold={0.9} triggerOnce={true}>
-                                {({ref, inView}) => (
-                                    <StyledFeaturessGridItem
+                                {({ ref, inView }) => (
+                                    <StyledFeaturesGridItem
                                         item
                                         xs={12}
                                         sm={6}
@@ -86,17 +85,17 @@ const Features = () => {
                                         inView={inView}
                                         sx={
                                             inView
-                                              ? {
-                                                visibility: "visible",
-                                                animation: "fadeInUp",
-                                                animationDuration: "1s",
-                                              }
-                                              : { visibility: "hidden" }
-                                          }
+                                                ? {
+                                                    visibility: "visible",
+                                                    animation: "fadeInUp",
+                                                    animationDuration: "1s",
+                                                }
+                                                : { visibility: "hidden" }
+                                        }
                                     >
-                                        <FeatureCard feature={feature}/> 
+                                        <FeatureCard feature={feature} />
 
-                                    </StyledFeaturessGridItem>
+                                    </StyledFeaturesGridItem>
                                 )}
 
                             </InView>

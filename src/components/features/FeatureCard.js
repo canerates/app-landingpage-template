@@ -14,7 +14,11 @@ const StyledFeatureBox = styled(Box)(({ theme }) => ({
   "&:hover": {
     transform: "scale(1.02)",
     boxShadow: `0px 0px 15px ${theme.palette.feature.shadowPrimary}90`,
-  }
+  },
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+  },
+  
 }));
 
 const StyledFeatureContent = styled("div")(({ theme }) => ({

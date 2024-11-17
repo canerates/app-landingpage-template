@@ -130,11 +130,8 @@ const StyledAppBarDrawerLink = styled(Link)(({ theme }) => ({
 }));
 
 const StyledLogoContainer = styled(Box)(({ theme }) => ({
-
     display: "flex",
     flexGrow: 1,
-
-
 }));
 
 const StyledLogo = styled(Link)(({ theme }) => ({
