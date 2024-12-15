@@ -1,0 +1,62 @@
+[
+  {
+    "id": "0",
+    "title": "Screen 1",
+    "image": "../images/screens/1345x2685.png",
+    "alt": "Image alt 1"
+  },
+  {
+    "id": "1",
+    "title": "Screen 2",
+    "image": "../images/screens/1345x2685.png",
+    "alt": "Image alt 2"
+  },
+  {
+    "id": "2",
+    "title": "Screen 3",
+    "image": "../images/screens/1345x2685.png",
+    "alt": "Image alt 3"
+  },
+  {
+    "id": "3",
+    "title": "Screen 4",
+    "image": "../images/screens/1345x2685.png",
+    "alt": "Image alt 4"
+  },
+  {
+    "id": "4",
+    "title": "Screen 5",
+    "image": "../images/screens/1345x2685.png",
+    "alt": "Image alt 5"
+  },
+  {
+    "id": "5",
+    "title": "Screen 6",
+    "image": "../images/screens/1345x2685.png",
+    "alt": "Image alt 6"
+  },
+  {
+    "id": "6",
+    "title": "Screen 7",
+    "image": "../images/screens/1345x2685.png",
+    "alt": "Image alt 7"
+  },
+  {
+    "id": "7",
+    "title": "Screen 8",
+    "image": "../images/screens/1345x2685.png",
+    "alt": "Image alt 8"
+  },
+  {
+    "id": "8",
+    "title": "Screen 9",
+    "image": "../images/screens/1345x2685.png",
+    "alt": "Image alt 9"
+  },
+  {
+    "id": "9",
+    "title": "Screen 10",
+    "image": "../images/screens/1345x2685.png",
+    "alt": "Image alt 10"
+  }
+]

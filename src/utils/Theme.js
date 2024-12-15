@@ -42,6 +42,7 @@ export const lightTheme = createTheme({
     values: {
       xs: 0,
       sm: 600,
+      smd: 750,
       md: 900,
       lg: 1200,
       xl: 1536,
@@ -57,8 +58,6 @@ export const lightTheme = createTheme({
       backgroundSecondary: "#018786", //green
       foregroundPrimary: "#fff",
       foregroundSecondary: "#fff",
-      shadowPrimary: "",
-      shadowSecondary: ""
     },
     text: {
       primary: "#0B132B",
@@ -74,14 +73,18 @@ export const lightTheme = createTheme({
       backgroundSecondary: "#bdc3c7",
       shadowPrimary: "#2c3e50",
       shadowSecondary: "#018786",
-      button: "#03DAC6", //green
+    },
+    screens: {
+      slickDotsBackgroundPrimary: "#53739A",
+      slickDotsBackgroundSecondary: "#bdc3c7", 
+      slickDotsShadowPrimary: "#fff",
+
     },
     technology: {
       backgroundPrimary: "#bdc3c7",
       backgroundSecondary: "#bdc3c7",
       shadowPrimary: "#2c3e50",
       shadowSecondary: "#018786",
-      button: "#03DAC6", //green
     },
     logo: {
       primary: "#840e0e"
@@ -131,6 +134,7 @@ export const darkTheme = createTheme({
     values: {
       xs: 0,
       sm: 600,
+      smd: 750,
       md: 900,
       lg: 1200,
       xl: 1536,
@@ -146,8 +150,6 @@ export const darkTheme = createTheme({
       backgroundSecondary: "#3700B3", //blue
       foregroundPrimary: "#000",
       foregroundSecondary: "#fff",
-      shadowPrimary: "",
-      shadowSecondary: ""
     },
     text: {
       primary: "#FFFFFF",
@@ -158,14 +160,17 @@ export const darkTheme = createTheme({
       backgroundSecondary: "",
       shadowPrimary: "#3A506B",
       shadowSecondary: "#03DAC6",
-      button: "#03DAC6", //green
+    },
+    screens: {
+      slickDotsBackgroundPrimary: "#03DAC6",
+      slickDotsBackgroundSecondary: "#d6d6d6", 
+      slickDotsShadowPrimary: "#3A506B",
     },
     technology: {
       backgroundPrimary: "#505050",
       backgroundSecondary: "",
       shadowPrimary: "#3A506B",
       shadowSecondary: "#03DAC6",
-      button: "#03DAC6", //green
     },
     logo: {
       primary: "#840e0e"

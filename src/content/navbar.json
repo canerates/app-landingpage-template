@@ -1,22 +1,22 @@
 [
-    {
-        "id": "0",
-        "name": "Home"
-    },
-    {
-        "id": "1",
-        "name": "Features"
-    },
-    {
-        "id": "2",
-        "name": "Screens"
-    },
-    {
-        "id": "3",
-        "name": "Technology"
-    },
-    {
-        "id": "4",
-        "name": "Designs"
-    }
+  {
+    "id": "0",
+    "name": "Home"
+  },
+  {
+    "id": "1",
+    "name": "Features"
+  },
+  {
+    "id": "2",
+    "name": "Screens"
+  },
+  {
+    "id": "3",
+    "name": "Technology"
+  },
+  {
+    "id": "4",
+    "name": "Designs"
+  }
 ]

@@ -9,30 +9,30 @@ import Designs from "../sections/Designs"
 import Footer from "../sections/Footer"
 
 const StyledMainPage = styled("div")(({ theme }) => ({
-    backgroundColor: theme.palette.background.primary,
-    overflow: "hidden",
+  backgroundColor: theme.palette.background.primary,
+  overflow: "hidden",
 }));
 const StyledMainContainer = styled(Container)({
-    maxWidth: "1600px",
+  maxWidth: "1600px",
 });
 
 const Main = () => {
 
-    return (
-        <>
-            <Navbar />
-            <StyledMainPage>
-                <StyledMainContainer>
-                    <Home />
-                    <Features />
-                    <Screens />
-                    <Technology />
-                    <Designs />
-                </StyledMainContainer>
-            </StyledMainPage>
-            <Footer />
-        </>
-    );
+  return (
+    <>
+      <Navbar />
+      <StyledMainPage>
+        <StyledMainContainer>
+          <Home />
+          <Features />
+          <Screens />
+          <Technology />
+          <Designs />
+        </StyledMainContainer>
+      </StyledMainPage>
+      <Footer />
+    </>
+  );
 }
 
 export default Main;
