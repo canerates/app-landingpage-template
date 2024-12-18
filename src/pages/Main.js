@@ -44,7 +44,7 @@ const Main = () => {
         <Loader />
       ) : (
         <>
-          <Navbar />
+          <Navbar isMain={true}/>
           <StyledMainPage>
             <StyledMainContainer>
               <Home img={homeImg}/>

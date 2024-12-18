@@ -6,11 +6,11 @@ import MenuIcon from "@mui/icons-material/Menu"
 import CloseIcon from "@mui/icons-material/Close"
 import WbSunnyIcon from "@mui/icons-material/WbSunny"
 import DarkModeIcon from "@mui/icons-material/DarkMode"
+import PageLogo from "./shared/PageLogo"
+import CButton from "./shared/CButton"
 
-import PageLogo from "../components/shared/PageLogo"
-import CButton from "../components/shared/CButton"
-
-import { Link } from "react-scroll"
+import { Link as ScrollLink } from "react-scroll"
+import { Link as RouterLink } from 'react-router-dom'
 import {
   AppBar,
   Toolbar,
@@ -66,7 +66,7 @@ const StyledAppBarButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-const StyledAppBarLink = styled(Link)(({ theme }) => ({
+const StyledAppBarLink = styled(ScrollLink)(({ theme }) => ({
   textDecoration: "none",
   "& p": {
     color: theme.palette.text.primary + " !important",
@@ -114,7 +114,7 @@ const StyledDrawerList = styled(List)(({ theme }) => ({
   display: "flex",
 }));
 
-const StyledAppBarDrawerLink = styled(Link)(({ theme }) => ({
+const StyledAppBarDrawerLink = styled(ScrollLink)(({ theme }) => ({
   "& p": {
     animation: "fadeIn",
     animationDuration: "2s",
@@ -133,7 +133,7 @@ const StyledLogoContainer = styled(Box)(({ theme }) => ({
   flexGrow: 1,
 }));
 
-const StyledLogo = styled(Link)(({ theme }) => ({
+const StyledScrollLinkLogo = styled(ScrollLink)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
@@ -156,8 +156,26 @@ const StyledLogo = styled(Link)(({ theme }) => ({
   },
 }));
 
+const StyledRouterLinkLogo = styled(RouterLink)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  cursor: "pointer",
+  textDecoration: "none",
 
-const Navbar = () => {
+  "& p": {
+    animation: "fadeIn",
+    animationDuration: "2s",
+    color: theme.palette.text.primary + " !important",
+    fontFamily: "'Playwrite GB S', cursive",
+    fontSize: "1.2rem",
+    padding: "0",
+
+  },
+}));
+
+
+const Navbar = ({ isMain }) => {
   const { theme, setTheme } = useContext(ThemeContext);
   const MuiTheme = useTheme();
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -328,19 +346,39 @@ const Navbar = () => {
         <StyledAppBarContainer>
           <Toolbar>
             <StyledLogoContainer>
-              <StyledLogo
-                href="#Home"
-                to="Home"
-                smooth={true}
-                duration={1000}
-                onMouseEnter={() => setIsLogoHovered(true)}
-                onMouseLeave={() => setIsLogoHovered(false)}
-              >
-                <PageLogo width={56} height={56} isSVG={true} isHovered={isLogoHovered}/>
-                <Typography>Appname</Typography>
-              </StyledLogo>
+              {isMain
+                ? <StyledScrollLinkLogo
+                  href="#Home"
+                  to="Home"
+                  smooth={true}
+                  duration={1000}
+                  onMouseEnter={() => setIsLogoHovered(true)}
+                  onMouseLeave={() => setIsLogoHovered(false)}
+                >
+                  <PageLogo width={56} height={56} isSVG={true} isHovered={isLogoHovered} />
+                  <Typography>Appname</Typography>
+                </StyledScrollLinkLogo>
+
+                : <StyledRouterLinkLogo
+                  to="/"
+                  smooth={true}
+                  duration={1000}
+                >
+                  <PageLogo width={56} height={56} isSVG={true} isHovered={isLogoHovered} />
+                  <Typography>Appname</Typography>
+                </StyledRouterLinkLogo>}
+
+
             </StyledLogoContainer>
-            {collapse ? drawer : navbar}
+            {isMain
+              ? collapse
+                ? drawer
+                : navbar
+              : <CButton
+                title="Download"
+                href={contentData.downloadLink}
+              />}
+            {/* {collapse ? drawer : navbar} */}
           </Toolbar>
         </StyledAppBarContainer>
       </StyledAppBar>
