@@ -23,8 +23,7 @@ import {
   useScrollTrigger,
   Drawer,
   List,
-  Box,
-  Switch
+  Box
 } from "@mui/material";
 
 
@@ -140,6 +139,11 @@ const StyledLogo = styled(Link)(({ theme }) => ({
   alignItems: "center",
   cursor: "pointer",
   textDecoration: "none",
+  "&:hover": {
+    "& p": {
+      color: theme.palette.text.secondary + " !important",
+    },
+  },
 
   "& p": {
     animation: "fadeIn",
@@ -160,7 +164,6 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const collapse = useMediaQuery(MuiTheme.breakpoints.down("md"));
-  const [checked, setChecked] = useState(theme === "dark");
 
   useEffect(() => {
     setTimeout(() => {
@@ -203,10 +206,7 @@ const Navbar = () => {
     window.localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-    setTheme(event.target.checked === true ? "dark" : "light")
-  };
+  const [isLogoHovered, setIsLogoHovered] = useState(false);
 
   const navbar = (
     <>
@@ -322,6 +322,7 @@ const Navbar = () => {
   );
 
   return (
+
     <Slide appear={false} direction="down" in={!trigger}>
       <StyledAppBar position="fixed" isScrolled={isScrolled}>
         <StyledAppBarContainer>
@@ -332,8 +333,10 @@ const Navbar = () => {
                 to="Home"
                 smooth={true}
                 duration={1000}
+                onMouseEnter={() => setIsLogoHovered(true)}
+                onMouseLeave={() => setIsLogoHovered(false)}
               >
-                <PageLogo width={56} height={56} isSVG={true} />
+                <PageLogo width={56} height={56} isSVG={true} isHovered={isLogoHovered}/>
                 <Typography>Appname</Typography>
               </StyledLogo>
             </StyledLogoContainer>

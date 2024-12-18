@@ -87,8 +87,14 @@ export const lightTheme = createTheme({
       shadowSecondary: "#018786",
     },
     logo: {
-      primary: "#840e0e"
-    }
+      primary: "#53739A",
+    },
+    mobileButton: {
+      backgroundPrimary: "#212121",
+      backgroundSecondary: "#53739A",
+      border: "#ecf0f1",
+      text: "#ecf0f1",
+    },
   }
 });
 
@@ -173,7 +179,13 @@ export const darkTheme = createTheme({
       shadowSecondary: "#03DAC6",
     },
     logo: {
-      primary: "#840e0e"
-    }
+      primary: "#03DAC6",
+    },
+    mobileButton: {
+      backgroundPrimary: "#ecf0f1",
+      backgroundSecondary: "#03DAC6",
+      border: "#212121",
+      text: "#212121",
+    },
   },
 });

@@ -1,4 +1,4 @@
-import { Typography, styled, Box, Button } from "@mui/material"
+import { Typography, styled, Box } from "@mui/material"
 import CButton from "../shared/CButton"
 
 const StyledTechnologyBox = styled(Box)(({ theme }) => ({

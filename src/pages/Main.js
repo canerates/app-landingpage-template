@@ -7,6 +7,8 @@ import Screens from "../sections/Screens"
 import Technology from "../sections/Technology"
 import Designs from "../sections/Designs"
 import Footer from "../sections/Footer"
+import Loader from "../sections/Loader"
+import homeImage from "../assets/1650x1200.webp"
 
 const StyledMainPage = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.background.primary,
@@ -18,19 +20,43 @@ const StyledMainContainer = styled(Container)({
 
 const Main = () => {
 
+  const [isLoading, setIsloading] = useState(true);
+  const [homeImg, setHomeImg] = useState(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsloading(false);
+    }, 2900);
+
+    const loadImage = async () => {
+      const img = new Image();
+      img.src = homeImage;
+      await img.decode();
+      setHomeImg(homeImage);
+    };
+    loadImage();
+  }, []);
+
   return (
+
     <>
-      <Navbar />
-      <StyledMainPage>
-        <StyledMainContainer>
-          <Home />
-          <Features />
-          <Screens />
-          <Technology />
-          <Designs />
-        </StyledMainContainer>
-      </StyledMainPage>
-      <Footer />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <Navbar />
+          <StyledMainPage>
+            <StyledMainContainer>
+              <Home img={homeImg}/>
+              <Features />
+              <Screens />
+              <Technology />
+              <Designs />
+            </StyledMainContainer>
+          </StyledMainPage>
+          <Footer />
+        </>
+      )}
     </>
   );
 }

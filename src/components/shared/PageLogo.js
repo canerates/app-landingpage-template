@@ -5,13 +5,14 @@ export const StyledPageLogoImage = styled("img")(({ theme, width, height }) => (
   animation: "fadeIn",
   animationDuration: "2s",
   width: width ? `${width}px` : "96px",
-  height: height ? `${height}px` : "96px"
+  height: height ? `${height}px` : "96px",
+  
 }));
 
-const PageLogo = ({ width = 96, height = 96, isSVG = false }) => {
+const PageLogo = ({ width = 96, height = 96, isSVG = false, isHovered }) => {
 
   const theme = useTheme();
-  const hexColor = theme.palette.text.primary;
+  const hexColor = isHovered ?  theme.palette.text.secondary : theme.palette.text.primary;
 
   const rgb = hexColor.match(/[\da-f]{2}/gi).map(x => parseInt(x, 16));
 
