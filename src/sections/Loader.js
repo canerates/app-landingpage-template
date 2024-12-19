@@ -13,19 +13,6 @@ const StyledLoaderContainer = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.background.primary,
 }));
 
-const pathVariants = {
-  hidden: {
-    pathLength: 0,
-  },
-  visible: {
-    pathLength: 1,
-    transition: {
-      duration: 2,
-      ease: "easeIn",
-    },
-  },
-};
-
 const Loader = () => {
   const [hasLoaded, setHasLoaded] = useState(false);
   const theme = useTheme();

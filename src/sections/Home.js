@@ -145,7 +145,7 @@ const Home = ({ img }) => {
               xs={12}
               md={8}
             >
-              <StyledHomeImage alt="Image of PasswOCD" src={img} />
+              <StyledHomeImage alt="Image of APP_NAME" src={img} />
             </StyledHomeGridItem>
 
             <StyledHomeGridText
