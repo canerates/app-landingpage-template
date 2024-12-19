@@ -1,7 +1,7 @@
 import { React, useState, useEffect, useContext } from "react"
 import { ThemeContext } from "../utils/ThemeContext"
 import navbarData from "../content/navbar.json"
-import contentData from "../content/main.json"
+import mainData from "../content/main.json"
 import MenuIcon from "@mui/icons-material/Menu"
 import CloseIcon from "@mui/icons-material/Close"
 import WbSunnyIcon from "@mui/icons-material/WbSunny"
@@ -10,7 +10,7 @@ import PageLogo from "./shared/PageLogo"
 import CButton from "./shared/CButton"
 
 import { Link as ScrollLink } from "react-scroll"
-import { Link as RouterLink } from 'react-router-dom'
+import { Link as RouterLink } from "react-router-dom"
 import {
   AppBar,
   Toolbar,
@@ -251,7 +251,7 @@ const Navbar = ({ isMain }) => {
       >
         <CButton
           title="Download"
-          href={contentData.downloadLink}
+          href={mainData.downloadLink}
         />
 
       </div>
@@ -305,7 +305,7 @@ const Navbar = ({ isMain }) => {
           <StyledDrawerList>
             <CButton
               title="Download"
-              href={contentData.downloadLink}
+              href={mainData.downloadLink}
               fontSize={1.75}
               isDrawer={true}
             />
@@ -356,7 +356,7 @@ const Navbar = ({ isMain }) => {
                   onMouseLeave={() => setIsLogoHovered(false)}
                 >
                   <PageLogo width={56} height={56} isSVG={true} isHovered={isLogoHovered} />
-                  <Typography>Appname</Typography>
+                  <Typography>{mainData.appName}</Typography>
                 </StyledScrollLinkLogo>
 
                 : <StyledRouterLinkLogo
@@ -365,7 +365,7 @@ const Navbar = ({ isMain }) => {
                   duration={1000}
                 >
                   <PageLogo width={56} height={56} isSVG={true} isHovered={isLogoHovered} />
-                  <Typography>Appname</Typography>
+                  <Typography>{mainData.appName}</Typography>
                 </StyledRouterLinkLogo>}
 
 
@@ -376,7 +376,7 @@ const Navbar = ({ isMain }) => {
                 : navbar
               : <CButton
                 title="Download"
-                href={contentData.downloadLink}
+                href={mainData.downloadLink}
               />}
             {/* {collapse ? drawer : navbar} */}
           </Toolbar>

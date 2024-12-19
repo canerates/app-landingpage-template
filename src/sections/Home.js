@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Container, Grid, Typography, styled } from "@mui/material"
 import * as Scroll from "react-scroll"
 import MobileAppButton from "../components/shared/MobileAppButton";
+import mainData from "../content/main.json"
 
 const StyledHomeRoot = styled("section")(({ theme, isMobile }) => ({
   display: "flex",
@@ -123,7 +124,7 @@ const StyledHomeButton = styled("div")(({ theme }) => ({
 const Home = ({ img }) => {
 
   const [isMobile, setIsMobile] = useState(false);
-  const iOSUrl = "#"
+  const iOSUrl = mainData.downloadLink
   // const googleUrl = "#"
   // const youtubeUrl = "#"
 

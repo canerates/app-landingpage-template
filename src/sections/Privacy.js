@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { useTranslation } from "react-i18next";
 import { StyledGenericRoot } from "../components/shared/Generic"
 import { Container, Grid, styled, Typography, List, ListItem, ListItemText } from "@mui/material"
-import { Link } from "react-router-dom"
+import { Link as RouterLink } from "react-router-dom"
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 const StyledPrivacyContainer = styled(Container)(({ theme }) => ({
@@ -35,7 +35,7 @@ const StyledPrivacyGridItem = styled(Grid)(({ theme }) => ({
   justifyContent: "flex-start",
 }));
 
-const StyledBackLink = styled(Link)(({ theme }) => ({
+const StyledBackLink = styled(RouterLink)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
   justifyContent: "flex-start",

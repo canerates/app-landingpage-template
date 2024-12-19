@@ -1,8 +1,9 @@
-import { Typography, Box, styled } from "@mui/material";
-import { Link } from 'react-router-dom'
+import { Typography, Box, Button, styled } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom"
 import "animate.css";
 import { useInView } from "react-intersection-observer";
 import PageLogo from "../components/shared/PageLogo";
+import mainData from "../content/main.json"
 
 const StyledFooterRoot = styled("section")(({ theme }) => ({
   display: "flex",
@@ -10,7 +11,6 @@ const StyledFooterRoot = styled("section")(({ theme }) => ({
   justifyContent: "center",
   textAlign: "center",
   backgroundColor: `${theme.palette.background.primary}99`,
-  // backgroundColor: theme.palette.background.primary,
   padding: "0.5rem",
 }));
 
@@ -53,7 +53,7 @@ const StyledLinksContainer = styled(Box)(({ theme }) => ({
 }));
 
 
-const StyledFooterLink = styled(Link)(({ theme }) => ({
+const StyledFooterLink = styled(RouterLink)(({ theme }) => ({
   textDecoration: "none",
   "& p": {
     color: theme.palette.text.primary + " !important",
@@ -70,9 +70,15 @@ const StyledFooterLink = styled(Link)(({ theme }) => ({
 
 }));
 
-const StyledFooterText = styled(Typography)(({ theme }) => ({
+const StyledFooterButton = styled(Button)(({ theme }) => ({
+  textDecoration: "none",
+  textTransform: "none",
   fontSize: "1rem",
+  cursor: "pointer",
   color: theme.palette.text.primary,
+  "&:hover": {
+      color: theme.palette.text.secondary + " !important",
+    },
 }));
 
 const Footer = () => {
@@ -94,12 +100,12 @@ const Footer = () => {
           <StyledLogoContainer>
             <StyledLogo>
               <PageLogo width={56} height={56} isSVG={true} />
-              <Typography>Appname</Typography>
+              <Typography>{mainData.appName}</Typography>
             </StyledLogo>
           </StyledLogoContainer>
           <StyledLinksContainer>
             <StyledFooterLink
-              href={"mailto:cnrates@gmail.com"}
+              href={mainData.contactLink}
               smooth={true}
               duration={1000}
             >
@@ -118,7 +124,13 @@ const Footer = () => {
 
         </StyledFooterContainer>
 
-        <StyledFooterText>© 2024 Caner Ates</StyledFooterText>
+        <StyledFooterButton
+          href={mainData.developerLink}
+          target="_blank"
+          // rel="noopener noreferrer"
+        >
+          {mainData.copyright}
+          </StyledFooterButton>
 
       </div>
     </StyledFooterRoot>
