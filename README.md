@@ -1,5 +1,7 @@
 <h2 align="center">
   Mobile App Landing Page Template
+  <br />
+  <a href="https://applanding.canerates.com/">applanding.canerates.com</a>
 </h2>
 
 <h2 align="left">
