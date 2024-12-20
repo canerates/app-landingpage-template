@@ -70,6 +70,23 @@ const StyledFooterLink = styled(RouterLink)(({ theme }) => ({
 
 }));
 
+const StyledContactLink = styled("a")(({ theme }) => ({
+  textDecoration: "none",
+  "& p": {
+    color: theme.palette.text.primary + " !important",
+    transform: "none",
+    transition: "transform 150ms ease-in-out 0s !important",
+    cursor: "pointer",
+    fontSize: "1.2rem",
+    padding: "0.5rem",
+    "&:hover": {
+      color: theme.palette.text.secondary + " !important",
+      transform: "translateY(-2px)",
+    },
+  }
+
+}));
+
 const StyledFooterButton = styled(Button)(({ theme }) => ({
   textDecoration: "none",
   textTransform: "none",
@@ -104,13 +121,11 @@ const Footer = () => {
             </StyledLogo>
           </StyledLogoContainer>
           <StyledLinksContainer>
-            <StyledFooterLink
+            <StyledContactLink
               href={mainData.contactLink}
-              smooth={true}
-              duration={1000}
             >
               <p>Contact</p>
-            </StyledFooterLink>
+            </StyledContactLink>
 
             <StyledFooterLink
               to="/privacy"

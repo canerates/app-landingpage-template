@@ -3,5 +3,9 @@
   "downloadLink": "#",
   "contactLink": "mailto:cnrates@gmail.com",
   "copyright": "© 2024 Caner Ates",
-  "developerLink": "https://www.canerates.com"
+  "developerLink": "https://www.canerates.com",
+
+  "homePageTitle": "Lorem ipsum",
+  "homePageSubTitle": "dolor sit amet",
+  "homePageSubText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 }

@@ -154,15 +154,15 @@ const Home = ({ img }) => {
               md={3.5}
             >
               <StyledHomeTitle component="h1">
-                Lorem ipsum
+                {mainData.homePageTitle}
               </StyledHomeTitle>
 
               <StyledHomeSubTitle component="h1">
-                dolor sit amet
+                {mainData.homePageSubTitle}
               </StyledHomeSubTitle>
 
               <StyledHomeSubText component="h1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                {mainData.homePageSubText}
               </StyledHomeSubText>
               <StyledHomeButton>
                 <MobileAppButton iOSUrl={iOSUrl}/>
