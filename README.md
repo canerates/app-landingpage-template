@@ -5,6 +5,7 @@
 <h2 align="left">
   Light Mode
 </h2>
+
 ![Screenshot](./home_light.png)
 
 <h2 align="left">
