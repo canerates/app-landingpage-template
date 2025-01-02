@@ -74,7 +74,7 @@ const StyledAppBarLink = styled(ScrollLink)(({ theme }) => ({
     transition: "transform 150ms ease-in-out 0s !important",
     cursor: "pointer",
     fontSize: "1.2rem",
-    padding: "0.5rem",
+    padding: "0.75rem",
     "&:hover": {
       color: theme.palette.text.secondary + " !important",
       transform: "translateY(-2px)",

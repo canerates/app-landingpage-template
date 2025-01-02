@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react"
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom"
 import { CssBaseline, ThemeProvider } from "@mui/material"
 import { ThemeContext } from "./utils/ThemeContext"
 import Main from "./pages/Main"
@@ -27,13 +27,13 @@ function App() {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <ThemeProvider theme={muiTheme}>
         <CssBaseline>
-          <Router>
+          <HashRouter>
             <ScrollToTop />
             <Routes>
               <Route exact path="/" element={<Main />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
             </Routes>
-          </Router>
+          </HashRouter>
         </CssBaseline>
       </ThemeProvider>
     </ThemeContext.Provider>

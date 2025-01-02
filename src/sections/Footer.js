@@ -22,6 +22,9 @@ const StyledFooterContainer = styled("div")(({ theme }) => ({
   maxWidth: "1000px",
   width: "70%",
   margin: "0 auto",
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+  },
 }));
 
 const StyledLogoContainer = styled(Box)(({ theme }) => ({
